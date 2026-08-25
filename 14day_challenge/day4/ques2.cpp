@@ -35,7 +35,6 @@ int main() {
 
     for(int i = n; i >= 1; i--){
         cout << n << " ";
-        n -= 1;
     }
     return 0;
 }
