@@ -16,4 +16,4 @@ int main() {
 /*
 "\n"   // string containing a newline
 '\n'   // single newline character
-/*
+*/
