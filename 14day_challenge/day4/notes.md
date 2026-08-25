@@ -216,3 +216,154 @@ i <= n
 ```
 
 So the same program works for any `n`.
+
+## While loops
+
+A while loop repeats code as long as a condition stays true.
+
+Basic structure:
+
+```cpp
+while (condition) {
+    // repeated code
+}
+```
+
+For example, print 1 to 5:
+
+```cpp
+int i = 1;
+
+while (i <= 5) {
+    cout << i << " ";
+    i++;
+}
+```
+
+Output:
+
+```cpp
+1 2 3 4 5
+```
+
+Here’s what happens:
+
+- `i = 1`
+
+- `1 <= 5 → true → print 1 → i becomes 2`
+- `2 <= 5 → true → print 2 → i becomes 3`
+- `3 <= 5 → true → print 3 → i becomes 4`
+- `4 <= 5 → true → print 4 → i becomes 5`
+- `5 <= 5 → true → print 5 → i becomes 6`
+- `6 <= 5 → false → stop`
+
+### for vs while
+
+These two loops do the same thing:
+
+```cpp
+for (int i = 1; i <= 5; i++) {
+    cout << i << " ";
+}
+```
+
+and:
+
+```cpp
+int i = 1;
+
+while (i <= 5) {
+    cout << i << " ";
+    i++;
+}
+```
+
+The difference is mainly where the pieces go.
+
+A for loop bundles everything together:
+
+```cpp
+for (start; condition; update)
+```
+
+A while loop separates them:
+
+```cpp
+start;
+
+while (condition) {
+    // code
+    update;
+}
+```
+
+A useful beginner rule is:
+
+- use `for` when you know roughly how many times you want to loop
+- use `while` when you want to repeat until something changes
+
+For example, with digit counting, we don’t really care beforehand how many iterations happen. We just keep dividing until the number becomes 0.
+
+### Very important: infinite loops
+
+Look at this:
+
+```cpp
+int i = 1;
+
+while (i <= 5) {
+    cout << i;
+}
+```
+
+There is no:
+
+```cpp
+ i++;
+```
+
+So `i` stays 1 forever.
+
+The condition:
+
+```cpp
+i <= 5
+```
+
+is always true.
+
+That creates an infinite loop.
+
+So with a while loop, always ask yourself:
+
+What changes inside the loop that will eventually make the condition false?
+
+## Mini exercise before digit counting
+
+Take an integer `n` and print:
+
+```
+1 2 3 ... n
+```
+
+using a `while` loop, not a `for` loop.
+
+Example input:
+
+```cpp
+5
+```
+
+Output:
+
+```cpp
+1 2 3 4 5
+```
+
+Use:
+
+```cpp
+int i = 1;
+```
+
+and figure out the while condition and update yourself.
