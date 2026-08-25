@@ -12,3 +12,8 @@ int main() {
     cout << "Hello World" << "\n" << "I am learning C++" << "\n" << "Day 1";
     return 0;
 }
+
+/*
+"\n"   // string containing a newline
+'\n'   // single newline character
+/*
